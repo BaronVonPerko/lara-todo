@@ -15,11 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('api/todo', 'TodoItemController@index');
-Route::get('api/todo/{id}', 'TodoItemController@getItem');
-Route::post('api/todo', 'TodoItemController@postItem');
-Route::delete('api/todo/{id}', 'TodoItemController@deleteItem');
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+// API Routes
+Route::group(['prefix' => 'api'], function() {
+    
+    // TODO Endpoints
+    Route::get('todo', 'TodoItemController@index');
+    Route::get('todo/{id}', 'TodoItemController@getItem');
+    Route::post('todo', 'TodoItemController@postItem');
+    Route::delete('todo/{id}', 'TodoItemController@deleteItem');
+    
+    
+});
