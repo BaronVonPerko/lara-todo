@@ -19,3 +19,7 @@ Route::get('api/todo', 'TodoItemController@index');
 Route::get('api/todo/{id}', 'TodoItemController@getItem');
 Route::post('api/todo', 'TodoItemController@postItem');
 Route::delete('api/todo/{id}', 'TodoItemController@deleteItem');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
