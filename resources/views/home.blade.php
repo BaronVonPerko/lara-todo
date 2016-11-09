@@ -8,7 +8,7 @@
                 <div class="panel-heading">To-Do</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <todo-list></todo-list>
                 </div>
             </div>
         </div>
