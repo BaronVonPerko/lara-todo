@@ -12,7 +12,7 @@ class CreateTodoItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('todoItems', function (Blueprint $table) {
+        Schema::create('todo-items', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('title');
@@ -27,6 +27,6 @@ class CreateTodoItemsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('todoItems');
+        Schema::drop('todo-items');
     }
 }
